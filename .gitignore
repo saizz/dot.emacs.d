@@ -4,3 +4,6 @@
 !init.el
 !site-lisp/
 !inits/
+!auto-save-list/
+auto-save-list/*
+!auto-save-list/.gitkeep
