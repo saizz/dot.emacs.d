@@ -1,4 +1,4 @@
-(require 'win-switch)
+;(require 'win-switch)
 
 ;; キー入力を受けつける時間
 (setq win-switch-idle-time 1.00)

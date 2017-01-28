@@ -34,3 +34,4 @@
 
 (define-key go-mode-map (kbd "C-c C-d") 'my/helm-go)
 (define-key go-mode-map (kbd "M-,") 'pop-tag-mark)
+(define-key go-mode-map (kbd "C-c C-j") 'go-direx-pop-to-buffer)

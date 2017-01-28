@@ -23,9 +23,9 @@
   '(
     ;; ここに使っているパッケージを書く。
     init-loader
+    direx
     exec-path-from-shell
     company
-    company-go
     flycheck
     helm
     helm-swoop
@@ -33,7 +33,13 @@
     smart-cursor-color
     which-key
     win-switch
+
+    ;; for go lang
+    company-go
+    go-direx
     go-mode
+
+    ;; theme
     darkburn-theme
     flatland-theme
     jazz-theme
