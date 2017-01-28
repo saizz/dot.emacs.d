@@ -1,6 +1,6 @@
 (require 'company)
 
-;(global-company-mode 1)
+(global-company-mode)
 
 (define-key company-active-map (kbd "M-n") nil)
 (define-key company-active-map (kbd "M-p") nil)

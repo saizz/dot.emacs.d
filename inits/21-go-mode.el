@@ -10,7 +10,7 @@
 (require 'company-go)
 
 ;; 諸々の有効化、設定
-(add-hook 'go-mode-hook 'company-mode)
+;(add-hook 'go-mode-hook 'company-mode)
 (add-hook 'go-mode-hook 'flycheck-mode)
 (add-hook 'go-mode-hook (lambda()
            (add-hook 'before-save-hook' 'gofmt-before-save)
