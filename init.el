@@ -21,12 +21,13 @@
 (require 'cl)
 (defvar installing-package-list
   '(
-    ;; ここに使っているパッケージを書く。
+    ;; common
     init-loader
     direx
     exec-path-from-shell
     company
     flycheck
+    magit
     helm
     helm-swoop
     highlight-symbol
@@ -34,7 +35,7 @@
     which-key
     win-switch
 
-    ;; for go lang
+    ;; for go-mode
     company-go
     go-direx
     go-mode
@@ -45,6 +46,7 @@
     flatland-theme
     jazz-theme
     leuven-theme
+    monokai-theme
     zenburn-theme
     ))
 

@@ -38,7 +38,7 @@
     (format "%%f - Emacs@%s" (system-name)))
 
 ;; 左側に行番号表示
-;(global-linum-mode t)
+(global-linum-mode t)
 ;(setq linum-format "%4d ")
 
 ;; 現在行を目立たせる

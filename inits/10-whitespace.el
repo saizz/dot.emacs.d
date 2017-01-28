@@ -24,7 +24,7 @@
 
 ;; faceの定義
 (defvar my/ws-bg-color "#1f1f1f")
-(defvar my/ws-fg-color "#2f2f2f")
+(defvar my/ws-fg-color "#0f0f0f")
 (set-face-attribute 'whitespace-trailing nil
                     :background my/ws-bg-color
                     :foreground "deep pink"

@@ -1,1 +1,1 @@
-(load-theme 'jazz t)
+(load-theme 'monokai t)
