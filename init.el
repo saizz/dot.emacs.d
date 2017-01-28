@@ -28,12 +28,16 @@
     company
     flycheck
     magit
+    git-gutter
     helm
     helm-swoop
     highlight-symbol
     smart-cursor-color
     which-key
     win-switch
+
+    ;; for markdown-mode
+    markdown-mode
 
     ;; for go-mode
     company-go
