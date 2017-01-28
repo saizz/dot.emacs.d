@@ -38,6 +38,7 @@
     company-go
     go-direx
     go-mode
+    go-eldoc
 
     ;; theme
     darkburn-theme

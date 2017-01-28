@@ -9,29 +9,30 @@
 ;(require 'go-mode)
 ;(require 'company-go)
 
-;; 諸々の有効化、設定
-;(add-hook 'go-mode-hook 'company-mode)
-;(add-hook 'go-mode-hook 'flycheck-mode)
-(add-hook 'go-mode-hook (lambda()
-           (add-hook 'before-save-hook' 'gofmt-before-save)
-           (local-set-key (kbd "M-.") 'godef-jump)
-           (set (make-local-variable 'company-backends) '(company-go))
-           (company-mode))
+(with-eval-after-load 'go-mode
 
-(defvar my/helm-go-source
-  '((name . "Helm Go")
-    (candidates . go-packages)
-    (action . (("Show document" . godoc)
-               ("Import package" . my/helm-go-import-add)))))
+  ;; company-mode
+  ;(add-to-list 'company-backends 'company-go)
 
-(defun my/helm-go-import-add (candidate)
-  (dolist (package (helm-marked-candidates))
-    (go-import-add current-prefix-arg package)))
+  ;; eldoc
+  (add-hook 'go-mode-hook 'go-eldoc-setup)
 
-(defun my/helm-go ()
-  (interactive)
-  (helm :sources '(my/helm-go-source) :buffer "*helm go*"))
+  (defvar my/helm-go-source
+    '((name . "Helm Go")
+      (candidates . (lambda ()
+                      (cons "builtin" (go-packages))))
+      (action . (("Show document" . godoc)
+                ("Import package" . my/helm-go-import-add)))))
 
-(define-key go-mode-map (kbd "C-c C-d") 'my/helm-go)
-(define-key go-mode-map (kbd "M-,") 'pop-tag-mark)
-(define-key go-mode-map (kbd "C-c C-j") 'go-direx-pop-to-buffer)
+  (defun my/helm-go-import-add (candidate)
+    (dolist (package (helm-marked-candidates))
+      (go-import-add current-prefix-arg package)))
+
+  (defun my/helm-go ()
+    (interactive)
+    (helm :sources '(my/helm-go-source) :buffer "*helm go*"))
+
+  ;; key bindings
+  (define-key go-mode-map (kbd "M-.") 'godef-jump)
+  (define-key go-mode-map (kbd "M-,") 'pop-tag-mark)
+  (define-key go-mode-map (kbd "C-c C-j") 'go-direx-pop-to-buffer))
