@@ -32,9 +32,11 @@
     helm
     helm-swoop
     highlight-symbol
-    smart-cursor-color
+    ;smart-cursor-color
     which-key
     win-switch
+    hiwin
+    shackle
 
     ;; for markdown-mode
     markdown-mode
@@ -47,10 +49,8 @@
 
     ;; theme
     darkburn-theme
-    flatland-theme
-    jazz-theme
-    leuven-theme
     monokai-theme
+    solarized-theme
     zenburn-theme
     ))
 

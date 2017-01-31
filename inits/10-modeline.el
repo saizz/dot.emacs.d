@@ -4,11 +4,11 @@
     mode-line-client
     mode-line-modified
     mode-line-remote
-    mode-line-frame-identification
+;    mode-line-frame-identification
     " "
     ;; the buffer name; the file name as a tool tip
-;    '(:eval (propertize "%b " 'face 'font-lock-keyword-face
-;        'help-echo (buffer-file-name)))
+    '(:eval (propertize "%b " 'face 'font-lock-keyword-face
+        'help-echo (buffer-file-name)))
     ;; line and column
     "(" ;; '%02' to set to 2 chars at least; prevents flickering
       (propertize "%02l" 'face 'font-lock-type-face) ","
@@ -54,8 +54,8 @@
 ;              'help-echo
 ;              (concat (format-time-string "%c; ")
 ;                      (emacs-uptime "Uptime:%hh"))))
-    " --"
+;    " --"
     ;; i don't want to see minor-modes; but if you want, uncomment this:
     ;;minor-mode-alist  ;; list of minor modes
-    "%-" ;; fill with '-'
+;    "%-" ;; fill with '-'
     ))

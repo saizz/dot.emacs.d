@@ -41,6 +41,9 @@
 ;(global-linum-mode t)
 ;(setq linum-format "%4d ")
 
+;; EOFをフリンジに表示
+(setq-default indicate-empty-lines t)
+
 ;; 現在行を目立たせる
 (global-hl-line-mode)
 

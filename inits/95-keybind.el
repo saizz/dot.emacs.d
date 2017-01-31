@@ -1,5 +1,14 @@
+;; C-aをカスタマイズ
+(global-set-key (kbd "C-a") 'my/goto-line-beginning-or-indent)
 ;; C-hをBSに
 (global-set-key (kbd "C-h") 'backward-delete-char)
+
+;; whitespace toggle
+(global-set-key (kbd "C-x w") 'global-whitespace-mode)
+
+;; comment region
+(global-set-key (kbd "C-c ;")   'comment-region)
+(global-set-key (kbd "C-c M-;") 'uncomment-region)
 
 ;; direx
 (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)

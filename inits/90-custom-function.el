@@ -1,0 +1,6 @@
+(defun my/goto-line-beginning-or-indent (&optional $position)
+  (interactive)
+  (or $position (setq $position (point)))
+  (let (($starting-position (progn (back-to-indentation) (point))))
+    (if (eq $starting-position $position)
+      (move-beginning-of-line 1))))
