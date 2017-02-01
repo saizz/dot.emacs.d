@@ -16,6 +16,6 @@
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
-;; hilight-symbol
-(global-set-key [f3] 'highlight-symbol)
-(global-set-key (kbd "M-s M-r") 'highlight-symbol-query-replace) ;; replace-symbol
+;; highlight-symbol
+;(global-set-key [f3] 'highlight-symbol)
+;(global-set-key (kbd "M-s M-r") 'highlight-symbol-query-replace) ;; replace-symbol
