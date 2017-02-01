@@ -32,11 +32,10 @@
     helm
     helm-swoop
     highlight-symbol
-    ;smart-cursor-color
     which-key
     win-switch
     hiwin
-    shackle
+    popwin
 
     ;; for markdown-mode
     markdown-mode
@@ -48,6 +47,7 @@
     go-eldoc
 
     ;; theme
+    atom-dark-theme
     darkburn-theme
     monokai-theme
     solarized-theme

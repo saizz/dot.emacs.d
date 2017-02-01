@@ -22,3 +22,6 @@
 
 ;; replace C-x o to win-switch
 (global-set-key (kbd "C-x o") 'win-switch-dispatch)
+
+;; undo window layout
+(global-set-key (kbd "C-z") 'winner-undo)

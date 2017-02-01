@@ -77,3 +77,6 @@
 
 ;; リージョンを削除できるようにする
 (delete-selection-mode t)
+
+;; windowの履歴を辿れるようにする
+(winner-mode 1)
