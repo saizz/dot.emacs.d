@@ -1,21 +1,27 @@
 ;;; pathはexec-path-from-shellでshellの$PATHを引き継ぐ
 
 ;; $GOROOT/bin
-;(add-to-list 'exec-path (expand-file-name "/usr/local/go/bin/"))
+;(add-to-list 'exec-path (expand-file-name "~/google/go/bin/"))
 
 ;; $GOPATH/bin
-;(add-to-list 'exec-path (expand-file-name "/Users/ryo/.go/bin"))
+;(add-to-list 'exec-path (expand-file-name "~/google/gopath/bin"))
 
 ;(require 'go-mode)
 ;(require 'company-go)
 
 (with-eval-after-load 'go-mode
 
+  ;; use goimports for formatting code.
+  (setq gofmt-command "goimports")
+
   ;; company-mode
-  ;(add-to-list 'company-backends 'company-go)
+  (add-to-list 'company-backends 'company-go)
 
   ;; eldoc
   (add-hook 'go-mode-hook 'go-eldoc-setup)
+
+  (add-hook 'go-mode-hook (lambda()
+    (add-hook 'before-save-hook' 'gofmt-before-save)))
 
   (defvar my/helm-go-source
     '((name . "Helm Go")
@@ -34,6 +40,7 @@
 
   ;; key bindings
   (define-key go-mode-map (kbd "M-.") 'godef-jump)
+  (define-key go-mode-map (kbd "C-c M-.") 'godef-jump-other-window)
   (define-key go-mode-map (kbd "M-,") 'pop-tag-mark)
   (define-key go-mode-map (kbd "C-c C-d") 'my/helm-go)
   (define-key go-mode-map (kbd "C-c C-j") 'go-direx-pop-to-buffer))
