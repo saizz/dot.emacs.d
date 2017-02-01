@@ -19,3 +19,6 @@
 ;; highlight-symbol
 ;(global-set-key [f3] 'highlight-symbol)
 ;(global-set-key (kbd "M-s M-r") 'highlight-symbol-query-replace) ;; replace-symbol
+
+;; replace C-x o to win-switch
+(global-set-key (kbd "C-x o") 'win-switch-dispatch)

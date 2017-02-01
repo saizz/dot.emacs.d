@@ -1,4 +1,4 @@
-;(require 'win-switch)
+(require 'win-switch)
 
 ;; キー入力を受けつける時間
 (setq win-switch-idle-time 1.00)
@@ -26,6 +26,3 @@
 (win-switch-set-keys '(" ") 'other-frame)
 (win-switch-set-keys '("u" [return]) 'exit)
 (win-switch-set-keys '("\M-\C-g") 'emergency-exit)
-
-;; C-x oを置き換える
-(global-set-key (kbd "C-x o") 'win-switch-dispatch)
