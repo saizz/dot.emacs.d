@@ -28,12 +28,13 @@
 (defun my/set-whitespace-face ()
   (set-face-foreground 'whitespace-trailing "DeepPink")
 
-  ;; for monokai theme
-  ;(set-face-foreground 'whitespace-tab (face-attribute 'whitespace-newline :foreground))
-  ;(set-face-background 'whitespace-tab "Glay")
+  ;; for monokai, atom-one-dark theme
+  (set-face-foreground 'whitespace-newline (face-attribute 'font-lock-comment-face :foreground))
+  (set-face-foreground 'whitespace-tab (face-attribute 'whitespace-newline :foreground))
+  (set-face-background 'whitespace-tab "Glay")
   ;; for other theme
-  (set-face-foreground 'whitespace-tab "Glay")
-  (set-face-background 'whitespace-tab (face-attribute 'whitespace-newline :foreground))
+  ;;(set-face-foreground 'whitespace-tab "Glay")
+  ;;(set-face-background 'whitespace-tab (face-attribute 'whitespace-newline :foreground))
 
 
   (set-face-underline 'whitespace-tab t))

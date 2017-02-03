@@ -40,6 +40,9 @@
     ;; for markdown-mode
     markdown-mode
 
+    ;; for yaml
+    yaml-mode
+
     ;; for go-mode
     company-go
     go-direx
@@ -47,7 +50,8 @@
     go-eldoc
 
     ;; theme
-    atom-dark-theme
+    ;atom-dark-theme
+    atom-one-dark-theme
     darkburn-theme
     monokai-theme
     solarized-theme
