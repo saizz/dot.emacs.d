@@ -1,4 +1,3 @@
 (require 'popwin)
 
-(popwin-mode t)
-;(setq popwin:adjust-other-windows t)
+(popwin-mode 1)

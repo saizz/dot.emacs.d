@@ -2,8 +2,6 @@
 (helm-mode 1)
 (helm-migemo-mode 1)
 
-(setq helm-display-function 'pop-to-buffer)
-
 (require 'helm-swoop)
 ;; isearch実行中にhelm-swoopに移行
 (define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
