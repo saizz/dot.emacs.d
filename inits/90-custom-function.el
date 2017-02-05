@@ -4,3 +4,7 @@
   (let (($starting-position (progn (back-to-indentation) (point))))
     (if (eq $starting-position $position)
       (move-beginning-of-line 1))))
+
+(defun open-atom ()
+  (interactive)
+  (call-process "atom" nil nil nil buffer-file-name))

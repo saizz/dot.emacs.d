@@ -8,6 +8,9 @@
 (setq auto-save-file-name-transforms
       `((".*" ,(expand-file-name "~/.emacs.d/backup/") t)))
 
+;; emacs外からファイルが更新された場合、再読み込みする
+(global-auto-revert-mode 1)
+
 ;; 起動時のスプラッシュ画面を非表示
 (setq inhibit-startup-message t)
 

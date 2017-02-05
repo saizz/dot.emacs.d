@@ -43,6 +43,9 @@
     ;; for yaml
     yaml-mode
 
+    ;; for plantuml-mode
+    plantuml-mode
+
     ;; for go-mode
     company-go
     go-direx

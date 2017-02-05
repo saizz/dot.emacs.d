@@ -10,7 +10,6 @@
 ;(require 'company-go)
 
 (with-eval-after-load 'go-mode
-
   ;; use goimports for formatting code.
   (setq gofmt-command "goimports")
 
@@ -43,4 +42,5 @@
   (define-key go-mode-map (kbd "C-c M-.") 'godef-jump-other-window)
   (define-key go-mode-map (kbd "M-,") 'pop-tag-mark)
   (define-key go-mode-map (kbd "C-c C-d") 'my/helm-go)
-  (define-key go-mode-map (kbd "C-c C-j") 'go-direx-pop-to-buffer))
+  (define-key go-mode-map (kbd "C-c C-j") 'go-direx-pop-to-buffer)
+)
