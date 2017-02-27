@@ -31,11 +31,13 @@
     git-gutter
     helm
     helm-swoop
+    helm-ag
     highlight-symbol
     which-key
     win-switch
     hiwin
     popwin
+    powerline
 
     ;; for markdown-mode
     markdown-mode

@@ -58,3 +58,14 @@ sudo apt-get install graphviz
 cd ~/bin
 wget http://jaist.dl.sourceforge.net/project/plantuml/plantuml.jar
 ```
+# for powerline
+
+## font patching
+
+https://github.com/Lokaltog/vim-powerline/tree/develop/fontpatcher
+
+# for helm-ag (ripgrep)
+
+## install ripgrep
+
+https://github.com/BurntSushi/ripgrep

@@ -10,3 +10,8 @@
 
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
+
+;; helm-ag
+(setq helm-ag-base-command "rg --vimgrep --no-heading")
+;; 現在のシンボルをデフォルトのクエリにする
+(setq helm-ag-insert-at-point 'symbol)
